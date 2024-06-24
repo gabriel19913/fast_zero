@@ -6,9 +6,9 @@ from fast_zero.app import app
 
 
 def test_root_deve_retornar_ok_e_ola_mundo():
-    client = TestClient(app) # Arrange (organização)
+    client = TestClient(app)  # Arrange (organização)
 
-    response = client.get('/') # Act (ação)
+    response = client.get('/')  # Act (ação)
 
-    assert response.status_code == HTTPStatus.OK # Assert (garantir)
+    assert response.status_code == HTTPStatus.OK  # Assert (garantir)
     assert response.json() == {'message': 'Olá mundo!'}
